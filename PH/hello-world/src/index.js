@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './02 Dynamic Comp Props/container/Home/Home';
+// import Home from './02 Dynamic Comp Props/container/Home/Home';
+// import Home from './03 Update Parent oleh Child/container/Home/Home';
+import Home from './04 LifeCycle/container/Home/Home';
 import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
