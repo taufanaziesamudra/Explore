@@ -9,10 +9,14 @@ const Post = (props) => {
             <div className="content">
                 <p className="title">{props.data.title}</p>
                 <p className="desc">{props.data.body}</p>
-
+                {/* Menerima props update
+                    dimana update membutuhkan data */}
+                <button className="update" onClick={() => props.update(props.data)}>Update</button>
                 {/* Menerima props delete
-                    dimana deleta membutuhkan id */}
+                    dimana delete membutuhkan id*/}
                 <button className="delete" onClick={() => props.delete(props.data.id)}>Remove</button>
+
+
             </div>
         </div>
     )

@@ -10,7 +10,7 @@ export class BlogPost extends Component {
 
     // Method untuk pemanggilan GET setelah didelete
     getPostAPI = () => {
-        axios.get('http://localhost:3000/posts')
+        axios.get('http://localhost:3004/posts')
             .then((res) => {
                 this.setState({
                     post: res.data
@@ -21,7 +21,7 @@ export class BlogPost extends Component {
     // Function atau method untuk menghapus
     // Method delete memerlukan object berupa data
     handleDelete = (data) => {
-        axios.delete(`http://localhost:3000/posts/${data}`)
+        axios.delete(`http://localhost:3004/posts/${data}`)
             .then((res) => {
                 // Pemanggilan API setelah didelete
                 this.getPostAPI()

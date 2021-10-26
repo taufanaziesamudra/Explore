@@ -11,7 +11,7 @@ const Post = (props) => {
                 <p className="desc">{props.data.body}</p>
 
                 {/* Menerima props delete
-                    dimana deleta membutuhkan id */}
+                    dimana delete membutuhkan id */}
                 <button className="delete" onClick={() => props.delete(props.data.id)}>Remove</button>
             </div>
         </div>
