@@ -7,7 +7,11 @@ import ReactDOM from 'react-dom';
 // import Home from './06 Pemanggilan Fake API GET/container/Home/Home';
 // import Home from './07 Pemanggilan Fake API DELETE/container/Home/Home';
 // import Home from './08 Pemanggilan Fake API POST/container/Home/Home';
-import Home from './09 Pemanggilan Fake API PUT/container/Home/Home';
+// import Home from './09 Pemanggilan Fake API PUT/container/Home/Home';
+// import Home from './10 React Router/container/Home/Home';
+// import Home from './11 Merapihkan Struktur Folder/container/Home/Home';
+import Home from './12 Params ke Hal Detail/container/Home/Home';
+
 import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -37,7 +41,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
+// If you want to start measuring performance in your app, pass a f~unction
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
