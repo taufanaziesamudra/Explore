@@ -15,46 +15,52 @@ import reportWebVitals from './reportWebVitals';
 // import Home from './10 React Router/container/Home/Home';
 // import Home from './11 Merapihkan Struktur Folder/container/Home/Home';
 // import Home from './12 Params ke Hal Detail/container/Home/Home';
-import Home from './13 Penerapan Redux/container/Home/Home';
+// import Home from './13 Penerapan Redux/container/Home/Home';
+// import Home from './14 Refactoring Redux/container/Home/Home';
+import Home from './15 Penerapan Context/container/Home/Home';
 
-import { createStore } from 'redux';
-import { Provider } from 'react-redux'
-import { act } from 'react-dom/test-utils';
+// import { createStore } from 'redux';
+// import { Provider } from 'react-redux'
+// import rootReducer from './14 Refactoring Redux/redux/reducer/globalReducer';
 
 // Penerapan Redux
-// 3. const initState
-const globalState = {
-  totalOrder: 0
-}
+// // 3. const initState
+// const globalState = {
+//   totalOrder: 0
+// }
 
-// 2. Reducer
-const rootReducer = (state = globalState, action) => {
-  if (action.type === "PLUS_ORDER") {
-    return {
-      ...state,
-      totalOrder: state.totalOrder + 1
-    }
-  }
+// // 2. Reducer
+// const rootReducer = (state = globalState, action) => {
+//   if (action.type === "PLUS_ORDER") {
+//     return {
+//       ...state,
+//       totalOrder: state.totalOrder + 1
+//     }
+//   }
 
-  if (action.type === "MINUS_ORDER") {
-    let totalOrder = 0
-    if (state.totalOrder > 0) {
-      totalOrder = state.totalOrder - 1
-    }
-    return {
-      ...state,
-      totalOrder: totalOrder
-    }
-  }
-  return state
-}
+//   if (action.type === "MINUS_ORDER") {
+//     let totalOrder = 0
+//     if (state.totalOrder > 0) {
+//       totalOrder = state.totalOrder - 1
+//     }
+//     return {
+//       ...state,
+//       totalOrder: totalOrder
+//     }
+//   }
+//   return state
+// }
 
-// 1. Store
-const storeRedux = createStore(rootReducer)
+// // 1. Store
+// const storeRedux = createStore(rootReducer)
 
 // 4. Membungkus Home dengan provider 
-ReactDOM.render(<Provider store={storeRedux}><Home /></Provider>, document.getElementById('root'));
+// ReactDOM.render(<Provider store={storeRedux}><Home /></Provider>, document.getElementById('root'));
 
+
+
+// Context
+ReactDOM.render(<Home />, document.getElementById('root'));
 // ReactDOM.render(
 //   <React.StrictMode>
 //     <Home />
