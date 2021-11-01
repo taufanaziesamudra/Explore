@@ -17,7 +17,8 @@ import reportWebVitals from './reportWebVitals';
 // import Home from './12 Params ke Hal Detail/container/Home/Home';
 // import Home from './13 Penerapan Redux/container/Home/Home';
 // import Home from './14 Refactoring Redux/container/Home/Home';
-import Home from './15 Penerapan Context/container/Home/Home';
+// import Home from './15 Penerapan Context/container/Home/Home';
+import Home from './16 Refactoring Context dengan HOC/container/Home/Home';
 
 // import { createStore } from 'redux';
 // import { Provider } from 'react-redux'
