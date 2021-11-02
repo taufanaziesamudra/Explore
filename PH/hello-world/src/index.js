@@ -18,49 +18,11 @@ import reportWebVitals from './reportWebVitals';
 // import Home from './13 Penerapan Redux/container/Home/Home';
 // import Home from './14 Refactoring Redux/container/Home/Home';
 // import Home from './15 Penerapan Context/container/Home/Home';
-import Home from './16 Refactoring Context dengan HOC/container/Home/Home';
+// import Home from './16 Refactoring Context dengan HOC/container/Home/Home';
+// import Home from './17 Global API Services GET/container/Home/Home';
+// import Home from './18 Global API Services POST/container/Home/Home';
+import Home from './19 Global API Services DELETE/container/Home/Home';
 
-// import { createStore } from 'redux';
-// import { Provider } from 'react-redux'
-// import rootReducer from './14 Refactoring Redux/redux/reducer/globalReducer';
-
-// Penerapan Redux
-// // 3. const initState
-// const globalState = {
-//   totalOrder: 0
-// }
-
-// // 2. Reducer
-// const rootReducer = (state = globalState, action) => {
-//   if (action.type === "PLUS_ORDER") {
-//     return {
-//       ...state,
-//       totalOrder: state.totalOrder + 1
-//     }
-//   }
-
-//   if (action.type === "MINUS_ORDER") {
-//     let totalOrder = 0
-//     if (state.totalOrder > 0) {
-//       totalOrder = state.totalOrder - 1
-//     }
-//     return {
-//       ...state,
-//       totalOrder: totalOrder
-//     }
-//   }
-//   return state
-// }
-
-// // 1. Store
-// const storeRedux = createStore(rootReducer)
-
-// 4. Membungkus Home dengan provider 
-// ReactDOM.render(<Provider store={storeRedux}><Home /></Provider>, document.getElementById('root'));
-
-
-
-// Context
 ReactDOM.render(<Home />, document.getElementById('root'));
 // ReactDOM.render(
 //   <React.StrictMode>

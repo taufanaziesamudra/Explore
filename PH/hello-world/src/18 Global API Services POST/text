@@ -1,0 +1,5 @@
+1. Install terlebih dahulu json server "npm Install -g json-server
+2. Membuat file dengan nama db.json lalu ambil sample dari post
+3. Untuk menjalankan db.json "npx json-server --watch db.json" dimana data tersebut dari
+    post yang sudah disediakan oleh json placeholder
+4. Untuk merubah localhost "json-server --watch db.json --port 3004"
