@@ -30,6 +30,18 @@ const Post = (path, root, data) => {
     return promise
 }
 
+const Put = (path, root, data) => {
+    const promise = new Promise((resolve, reject) => {
+        axios.put(`${root ? onlineRoot : RoothPath}/${path}`, data)
+            .then((result) => {
+                resolve(result)
+            }, (err) => {
+                reject(err)
+            })
+    })
+    return promise
+}
+
 const Delete = (path, root) => {
     const promise = new Promise((resolve, reject) => {
         axios.delete(`${root ? onlineRoot : RoothPath}/${path}`)
@@ -42,10 +54,11 @@ const Delete = (path, root) => {
     return promise
 }
 
-
 // DELETE
 const deleteNewsBlog = (id) => Delete(`posts/${id}`, false)
 
+// PUT
+const updateNewsBlog = (data, id) => Put(`posts/${id}`, false, data)
 // POST
 const postNewsBlog = (data) => Post('posts', false, data)
 
@@ -55,6 +68,7 @@ const getComments = () => Get('comments', true)
 
 const API = {
     deleteNewsBlog,
+    updateNewsBlog,
     postNewsBlog,
     getNewsBlog,
     getComments

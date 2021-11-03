@@ -21,7 +21,9 @@ import reportWebVitals from './reportWebVitals';
 // import Home from './16 Refactoring Context dengan HOC/container/Home/Home';
 // import Home from './17 Global API Services GET/container/Home/Home';
 // import Home from './18 Global API Services POST/container/Home/Home';
-import Home from './19 Global API Services DELETE/container/Home/Home';
+// import Home from './19 Global API Services DELETE/container/Home/Home';
+// import Home from './20 Global API Services PUT/container/Home/Home';
+import Home from './21 Refactoring Global API Services/container/Home/Home';
 
 ReactDOM.render(<Home />, document.getElementById('root'));
 // ReactDOM.render(
