@@ -28,7 +28,7 @@ export class Home extends Component {
                         <Link to="/">BlogPost</Link>
                         <Link to="/product">Product</Link>
                         <Link to="/lifecycle">LifeCycle</Link>
-                        <Link to="youtubecomppages">YouTubeCompPage</Link>
+                        <Link to="/youtubecomppages">YouTubeCompPage</Link>
                     </div>
                     {/* exact berguna untuk halaman home tidak mengikut saat berpindah */}
                     <Route path="/" exact component={BlogPost}></Route>

@@ -22,7 +22,7 @@ export class Home extends Component {
                         <Link to="/">BlogPost</Link>
                         <Link to="/product">Product</Link>
                         <Link to="/lifecycle">LifeCycle</Link>
-                        <Link to="youtubecomppages">YouTubeCompPage</Link>
+                        <Link to="/youtubecomppages">YouTubeCompPage</Link>
                     </div>
                     <Route path="/" exact component={BlogPost}></Route>
                     <Route path="/detail-post/:postID" component={DetailPost}></Route>
