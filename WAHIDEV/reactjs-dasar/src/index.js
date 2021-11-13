@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './01 Integrasi Firebase React JS/containers/pages/App'
+import App from './App';
 import reportWebVitals from './reportWebVitals';
-import firebase from './01 Integrasi Firebase React JS/config/firebase';
-
-console.log("firebase aku", firebase)
 
 ReactDOM.render(
   <React.StrictMode>
