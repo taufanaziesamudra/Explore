@@ -1,8 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './Dasar/Navbar';
-import StateProps from './Dasar/Belajar Props/StateProps';
-import Map from './Dasar/Map';
+// import logo from './logo.svg';
+// import './App.css';
+import Crud from './crud/Crud';
+// import Navbar from './Dasar/Navbar';
+// import StateProps from './Dasar/Belajar Props/StateProps';
+// import Map from './Dasar/Map';
 
 function App() {
   return (
@@ -11,7 +12,9 @@ function App() {
 
       {/* <StateProps /> */}
 
-      <Map />
+      {/* <Map /> */}
+
+      <Crud />
     </div>
   );
 }
