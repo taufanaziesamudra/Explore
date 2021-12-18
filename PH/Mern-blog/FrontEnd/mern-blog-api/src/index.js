@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './01 Atonomic Design/pages/App'
 // import App from './02 Navigation Router/pages/App'
-import App from './03 Slicing Halaman Component dengan Hooks/pages/App'
+// import App from './03 Slicing Halaman Component dengan Hooks/pages/App'
+import App from './04 Halaman Berlapis dengan Nested Route/pages/App'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
