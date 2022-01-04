@@ -13,7 +13,7 @@ akses.route('/delete/:id').delete((req, res) => {
         .catch((error) => res.status(400).json(error.message))
 })
 
-akses.route('/update/"id').put((req, res) => {
+akses.route('/update/:id').put((req, res) => {
     BukuModel.findByIdAndUpdate(req.params.id, req.body, { new: true })
         .then((updateBook) => res.status(200).json(updateBook))
         .catch((error) => res.status(400).json(error.message))

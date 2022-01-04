@@ -165,7 +165,7 @@ const BookManagement = ({ bookList, store, update, remove }) => {
                                     <td> {book.harga} </td>
                                     <td> {book.stock} </td>
                                     <td>
-                                        <button className="btn btn-info mr-3" onClick={() => showEdit(book)}>Edit</button>
+                                        <button className="btn btn-info me-4" onClick={() => showEdit(book)}>Edit</button>
                                         <button className="btn btn-danger" onClick={() => deleteBook(book)}>Delete</button>
                                     </td>
                                 </tr>

@@ -4,7 +4,11 @@ import './index.css';
 // import App from './01 Atonomic Design/pages/App'
 // import App from './02 Navigation Router/pages/App'
 // import App from './03 Slicing Halaman Component dengan Hooks/pages/App'
-import App from './04 Halaman Berlapis dengan Nested Route/pages/App'
+// import App from './04 Halaman Berlapis dengan Nested Route/pages/App'
+// import App from './05 Styling Header dan Footer/pages/App'
+// import App from './06 Styling Blog Post & Pagination/pages/App'
+// import App from './07 Styling Create & Detail Blog/pages/App'
+import App from './08 Berpindah Halaman dengan useNavigate/pages/App'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

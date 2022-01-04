@@ -11,10 +11,9 @@ const MainApp = () => {
             <Header />
             <div>
                 <Routes>
-                    <Route path='/' element={<Home />} >
-                        <Route path=':create-blog' element={<CreateBlog />} />
-                        <Route path='/detail-blog/:' element={<DetailBlog />} />
-                    </ Route>
+                    <Route path='/' element={<Home />} />
+                    <Route path='create-blog' element={<CreateBlog />} />
+                    <Route path=':detail-blog' element={<DetailBlog />} />
                 </Routes>
             </div>
             <Footer />

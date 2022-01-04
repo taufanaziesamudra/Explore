@@ -5,7 +5,7 @@ import './register.scss'
 import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
-    // Membaut variabel dnegan nama navigate dimana parameter berasal dari react-router-dom
+    // Membuat variabel dnegan nama navigate dimana parameter berasal dari react-router-dom
     const navigate = useNavigate()
     return (
         <div className='main-page'>
