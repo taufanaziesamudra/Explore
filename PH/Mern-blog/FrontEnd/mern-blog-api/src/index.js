@@ -8,7 +8,12 @@ import './index.css';
 // import App from './05 Styling Header dan Footer/pages/App'
 // import App from './06 Styling Blog Post & Pagination/pages/App'
 // import App from './07 Styling Create & Detail Blog/pages/App'
-import App from './08 Berpindah Halaman dengan useNavigate/pages/App'
+// import App from './08 Berpindah Halaman dengan useNavigate/pages/App'
+// import App from './09 Mengganti data Dummy dengan Response API/pages/App'
+// import App from './10 SetUp State Management Redux/pages/App'
+// import App from './11 Merubah Value & State Global Redux/pages/App'
+// import App from './12 Memahami Combine Reducer (Multiple)/pages/App'
+import App from './13 Memahami Action Creator async store dengan Redux/pages/App'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

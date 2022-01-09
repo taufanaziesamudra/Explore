@@ -1,0 +1,4 @@
+home
+config => redux => action
+install redux thunk 
+redux thunk berfungsi untuk menerima fungsi yang bersifat asncy. asncy adalah sebuah fungsi untuk memberikan delay kepada response nay
