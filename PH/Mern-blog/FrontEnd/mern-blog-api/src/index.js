@@ -13,7 +13,10 @@ import './index.css';
 // import App from './10 SetUp State Management Redux/pages/App'
 // import App from './11 Merubah Value & State Global Redux/pages/App'
 // import App from './12 Memahami Combine Reducer (Multiple)/pages/App'
-import App from './13 Memahami Action Creator async store dengan Redux/pages/App'
+// import App from './13 Memahami Action Creator async store dengan Redux/pages/App'
+// import App from './14 Implementasi Pagination dihalaman Home/pages/App'
+// import App from './15 Implementasi Postingan Baru/pages/App'
+import App from './16 Refactor Menambah Postingan dan pakai Redux/pages/App'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

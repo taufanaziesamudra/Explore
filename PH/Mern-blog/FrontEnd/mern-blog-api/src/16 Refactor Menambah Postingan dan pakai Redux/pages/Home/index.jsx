@@ -1,5 +1,5 @@
 // import axios from 'axios'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router'
 import { Button, Gap } from '../../components'
@@ -8,14 +8,26 @@ import { setDataBlog } from '../../config/redux/action/homeAction'
 import './Home.scss'
 
 const Home = () => {
-    const { dataBlog } = useSelector(state => state.homeReducer) // Destructuring
+    const [counter, setCount] = useState(1)
+    const { dataBlog, page } = useSelector(state => state.homeReducer) // Destructuring
+
     const disPatch = useDispatch()
 
     useEffect(() => {
-        disPatch(setDataBlog())
-    }, [disPatch])
+        disPatch(setDataBlog(counter))
+    }, [counter, disPatch])
 
     const navigate = useNavigate();
+
+    const previous = () => { // Function untuk previous
+        setCount(counter <= 1 ? 1 : counter - 1)
+        console.log(counter)
+    }
+
+    const next = () => { // Function untuk next
+        setCount(counter === page.totalPage ? page.totalPage : counter + 1)
+        console.log(counter)
+    }
     return (
         <div className='home-page-wrapper'>
             <div className="create-wrapper">
@@ -34,9 +46,11 @@ const Home = () => {
                 })}
             </div>
             <div className="pagination">
-                <Button title='Previous' />
+                <Button title='Previous' onClick={previous} />
                 <Gap width={20} />
-                <Button title='Next' />
+                <p className="text-page">{page.currentPage} / {page.totalPage}</p>
+                <Gap width={20} />
+                <Button title='Next' onClick={next} />
             </div>
             <Gap height={20} />
         </div>
