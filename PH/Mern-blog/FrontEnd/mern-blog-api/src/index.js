@@ -16,7 +16,10 @@ import './index.css';
 // import App from './13 Memahami Action Creator async store dengan Redux/pages/App'
 // import App from './14 Implementasi Pagination dihalaman Home/pages/App'
 // import App from './15 Implementasi Postingan Baru/pages/App'
-import App from './16 Refactor Menambah Postingan dan pakai Redux/pages/App'
+// import App from './16 Refactor Menambah Postingan dan pakai Redux/pages/App'
+// import App from './17 Integrasi Detail Blog Post dengan Unique ID/pages/App'
+// import App from './18 Implermentasi Update Blog Post/pages/App'
+import App from './Latihan/pages/App'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
