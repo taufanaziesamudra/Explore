@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import HelloWorld from './Day1/Component/HelloWorld';
+// import HelloWorld from './Day1/Component/HelloWorld';
 // import HelloWorld from './Day1/Component/HelloWorld';
 // import Home from './Day1/Component/Home';
 
@@ -11,7 +11,9 @@ import HelloWorld from './Day1/Component/HelloWorld';
 // import StateProps from './Day3/StateProps';
 // import BoxClass from './Day3/BoxClass/BoxClass';
 
-import Home3 from './Day4/Home3';
+// import Home3 from './Day4/Home3';
+// import Home4 from './Day5/Home4';
+import Home5 from './Day6/Home5';
 
 function App() {
   return (
@@ -31,7 +33,13 @@ function App() {
 
 
       {/* Day4 */}
-      <Home3 />
+      {/* <Home3 /> */}
+
+      {/* Day5 */}
+      {/* <Home4 /> */}
+
+      {/* Day 6 */}
+      <Home5 />
 
     </div>
   );
