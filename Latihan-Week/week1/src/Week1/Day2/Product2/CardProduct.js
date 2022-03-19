@@ -56,7 +56,7 @@ import React, { useState } from 'react'
 
 const CardProduct = (props) => {
     const [state, setState] = useState({
-        // order: 5,
+        order: 5,
     })
 
     const handleCounterChange = (newValue) => {
@@ -80,6 +80,7 @@ const CardProduct = (props) => {
             })
         }
     }
+
     return (
         <div className="card">
             <div className="img-thumb-prod">
@@ -89,7 +90,7 @@ const CardProduct = (props) => {
             <p className="product-price">Rp. 54.000</p>
             <div className="counter">
                 <button onClick={handleMinus} className="minus">-</button>
-                <input className="type" value={props.order}></input>
+                <input className="type" value={state.order}></input>
                 <button onClick={handlePlus} className="plus">+</button>
             </div>
         </div >

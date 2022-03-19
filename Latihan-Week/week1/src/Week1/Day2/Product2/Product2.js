@@ -45,7 +45,7 @@ import CardProduct from './CardProduct'
 import './Product.css'
 const Product2 = () => {
     const [state, setState] = useState({
-        order: 5,
+        order: 4,
         nama: 'Taufan Ajie Samudro'
     })
 
@@ -54,6 +54,20 @@ const Product2 = () => {
             order: newValue
         })
     }
+
+    // const handlePlus = () => {
+    //     setState({
+    //         order: state.order + 1
+    //     })
+    // }
+
+    // const handleMinus = () => {
+    //     if (state.order > 0) {
+    //         setState({
+    //             order: state.order - 1
+    //         })
+    //     }
+    // }
     return (
         <Fragment>
             <div className='header'>
@@ -66,7 +80,10 @@ const Product2 = () => {
                     <div className='count'>{state.order}</div>
                 </div>
             </div>
-            <CardProduct kirim={state.order} counterChange={(value) => handleCounter(value)} />
+            <CardProduct order={state.order}
+                // handlePlus={handlePlus}
+                // handleMinus={handleMinus}
+                counterChange={(value) => handleCounter(value)} />
         </Fragment>
     )
 }
