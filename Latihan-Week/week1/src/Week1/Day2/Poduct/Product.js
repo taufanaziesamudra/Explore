@@ -1,17 +1,19 @@
+// StateFull Compnent
 // import React, { Component, Fragment } from 'react'
 // import './Product.css'
 // export class Product extends Component {
+//     // Menginitsialisai state
 //     state = {
 //         order: 4,
 //         name: 'Taufan Ajie Samudro',
 //     }
-
+//     // Method plus
 //     handlePlus = () => {
 //         this.setState({
 //             order: this.state.order + 1
 //         })
 //     }
-
+//     // Method Minus
 //     hanldeMinus = () => {
 //         if (this.state.order > 0) {
 //             this.setState({
@@ -19,7 +21,7 @@
 //             })
 //         }
 //     }
-
+//     // Method merubah name dengan value berubah
 //     handleChange = (berubah) => {
 //         this.setState({
 //             name: berubah
@@ -47,11 +49,19 @@
 //                     <p className="product-title">Daging Orang</p>
 //                     <p className="product-price">Rp. 54.000</p>
 //                     <div className="counter">
+//                         {/* Menerima method Minus */}
 //                         <button onClick={this.hanldeMinus} className="minus">-</button>
+
+//                         {/* Menerima state "order" */}
 //                         <input className="type" value={this.state.order}></input>
+
+//                         {/* Meneriam method plus */}
 //                         <button onClick={this.handlePlus} className="plus">+</button>
 
+//                         {/* Menerima state "name" */}
 //                         <input className="type" value={this.state.name}></input>
+
+//                         {/* Menerima method "handleChnge dengan value" */}
 //                         <button onClick={() => this.handleChange('Topan')}>Berubah</button>
 //                     </div>
 //                 </div>
@@ -62,21 +72,27 @@
 
 // export default Product
 
+
+
+
+
+// Functional Component
 import React, { Fragment, useState } from 'react'
 import './Product.css'
 
 const Product = () => {
+    // Menginitsialisai state
     const [state, setState] = useState({
         order: 4,
         nama: 'Taufan'
     })
-
+    // Method plus
     const handlePlus = () => {
         setState({
             order: state.order + 1
         })
     }
-
+    // Method minus
     const handleMinus = () => {
         if (state.order > 0) {
             setState({
@@ -103,8 +119,13 @@ const Product = () => {
                 <p className='product-title'> Daging Ayam</p>
                 <p className='product-price'>Rp.54.0000</p>
                 <div className='counter'>
+                    {/* Menerima method Minus */}
                     <button className='minus' onClick={handleMinus}>-</button>
+
+                    {/* Menerima state "order" */}
                     <input className='type' value={state.order}></input>
+
+                    {/* Menerima method Plus */}
                     <button className='plus' onClick={handlePlus}>+</button>
 
                 </div>

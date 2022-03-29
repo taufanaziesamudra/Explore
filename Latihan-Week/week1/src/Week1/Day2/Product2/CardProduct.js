@@ -55,6 +55,7 @@
 import React, { useState } from 'react'
 
 const CardProduct = (props) => {
+    // Menginisialisasi state
     const [state, setState] = useState({
         order: 5,
     })
@@ -67,7 +68,7 @@ const CardProduct = (props) => {
         setState({
             order: state.order + 1
         }, () => {
-            props.handleCounterChange(state.order)
+            handleCounterChange(state.order)
         })
     }
 
@@ -76,7 +77,7 @@ const CardProduct = (props) => {
             setState({
                 order: state.order - 1
             }, () => {
-                props.handleCounterChange(state.order)
+                handleCounterChange(state.order)
             })
         }
     }

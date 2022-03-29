@@ -2,7 +2,7 @@ import React from 'react'
 
 const Logut = (props) => {
     return (
-        <button onClick={props.onCLick}>Logut</button>
+        <button onClick={props.onClick}>Logut</button>
     )
 }
 

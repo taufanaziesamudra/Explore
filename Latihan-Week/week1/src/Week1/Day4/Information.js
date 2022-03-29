@@ -1,7 +1,7 @@
+// StateFull Component
 // import React, { Component } from 'react'
 
 // export class Information extends Component {
-
 //     render() {
 //         const { isInformation, showInformation } = this.props
 //         return (
@@ -21,6 +21,11 @@
 
 // export default Information
 
+
+
+
+
+// Functional Component
 import React from 'react'
 
 const Information = ({ isInformation, showInformation }) => {

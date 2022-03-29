@@ -1,3 +1,4 @@
+// StateFull Component
 // import React, { Component } from 'react'
 // import Greeting from './Greeting'
 // import Information from './Information'
@@ -44,6 +45,10 @@
 // export default Home3
 
 
+
+
+
+// Functional Component
 import React, { useState } from 'react'
 import Greeting from './Greeting'
 import Information from './Information'

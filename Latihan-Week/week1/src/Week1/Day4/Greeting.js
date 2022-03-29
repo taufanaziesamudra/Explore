@@ -1,3 +1,4 @@
+// StateFull Component
 // import React, { Component } from 'react'
 
 // export class Greeting extends Component {
@@ -22,6 +23,10 @@
 // export default Greeting
 
 
+
+
+
+// StateFull Component
 import React, { useState } from 'react'
 
 const Greeting = (props) => {

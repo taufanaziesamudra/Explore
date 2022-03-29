@@ -1,3 +1,4 @@
+// StateFll Component
 // import React, { Component } from 'react'
 
 // export class Operan extends Component {
@@ -15,6 +16,9 @@
 
 
 
+
+
+// Functional Component
 import React from 'react'
 
 const Operan = (props) => {

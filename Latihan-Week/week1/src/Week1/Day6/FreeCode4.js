@@ -42,27 +42,30 @@ import React, { useState } from 'react'
 
 const FreeCode4 = () => {
     const [state, setState] = useState({
-        input: '',
-        submit: ''
+        todos: []
     })
 
     const handleChange = (event) => {
+        const jam = jam.value
+        const aktifitas = aktifitas.value
+        state.todos.push({ jam, aktifitas })
         setState({
-            input: event.target.value
+            todos: event.target.value
         })
     }
 
     const handleSubmit = (event) => {
         event.preventDefault()
         setState({
-            submit: state.input
+            todos: state.todos
         })
     }
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <input value={state.input} onChange={handleChange}></input>
-                <button type='submit'>Submit!</button>
+            <form >
+                <input type='text' value={state.jam} onChange={handleChange}></input>
+                <input type='text' value={state.aktifitas} onChange={handleChange}></input>
+                <button type='submit' onClick={handleSubmit}>Submit!</button>
             </form>
             <h1>{state.submit}</h1>
         </div>

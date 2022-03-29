@@ -1,3 +1,4 @@
+// StateFull Component
 // import React, { Component } from 'react'
 // import HelloWorld from './HelloWorld'
 
@@ -5,6 +6,7 @@
 //     render() {
 //         return (
 //             <div>
+//                 {/* Membuat props "nama" dan "belakang yang akan diterima HelloWorld" */}
 //                 <HelloWorld nama="Taufan" belakang="Kamu" />
 //                 <HelloWorld nama="Ajie" />
 //                 <HelloWorld nama="Samudro" />
@@ -16,12 +18,18 @@
 
 // export default Home
 
+
+
+
+
+// Functional Component
 import React from 'react'
 import HelloWorld from './HelloWorld'
 
 const Home = () => {
     return (
         <div>
+            {/* Membuat props "nama" dan "belakang yang akan diterima HelloWorld" */}
             <HelloWorld nama='Taufan' belakang='Ajie' />
             <HelloWorld nama='Komeng' belakang='Udin' />
             <HelloWorld nama='Bangkid' belakang='Widirato' />

@@ -69,6 +69,7 @@
 import React, { useState } from 'react'
 
 const BoxClass = () => {
+    // Menginisialisasi state
     const [state, setState] = useState({
         sub: false,
         like: 0,

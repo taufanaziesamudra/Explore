@@ -1,3 +1,4 @@
+// StateFull Component
 // import React, { Component } from 'react'
 // import YouTubeCompoent from '../StateLess/YouTubeComponent/YouTubeComponent'
 
@@ -5,6 +6,7 @@
 //     render() {
 //         return (
 //             <div>
+//                 {/* Membuat props "time", "title" dan "desc" yang akan diterima oleh YoutubeComponent */}
 //                 <YouTubeCompoent
 //                     time='00:01'
 //                     title='Belajar Ngoding Lagi'
@@ -30,12 +32,17 @@
 // export default Home
 
 
+
+
+
+// Functional Component
 import React from 'react'
 import YouTubeCompoent from '../StateLess/YouTubeComponent/YouTubeComponent'
 
 const Home = () => {
     return (
         <div>
+            {/* Membuat props "time", "title" dan "desc" yang akan diterima oleh YoutubeComponent*/}
             <YouTubeCompoent
                 time='00:02'
                 title='Belalar lagi'

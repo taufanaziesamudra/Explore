@@ -1,3 +1,4 @@
+// StateFull Component
 // import React, { Component } from 'react'
 // import Operan from './Operan'
 
@@ -29,6 +30,10 @@
 // export default StateProps
 
 
+
+
+
+// Functional Component
 import React, { useState } from 'react'
 import Operan from './Operan'
 

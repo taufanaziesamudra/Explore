@@ -1,3 +1,4 @@
+// StateFull Component
 // import React, { Component, Fragment } from 'react'
 // import './Product.css'
 // import CardProduct from './CardProduct'
@@ -40,10 +41,15 @@
 // export default Product2
 
 
+
+
+
+// Functional Component
 import React, { Fragment, useState } from 'react'
 import CardProduct from './CardProduct'
 import './Product.css'
 const Product2 = () => {
+    // Menginisialisasi state
     const [state, setState] = useState({
         order: 4,
         nama: 'Taufan Ajie Samudro'
@@ -54,13 +60,13 @@ const Product2 = () => {
             order: newValue
         })
     }
-
+    // // Method Plus
     // const handlePlus = () => {
     //     setState({
     //         order: state.order + 1
     //     })
     // }
-
+    // // Method Minus
     // const handleMinus = () => {
     //     if (state.order > 0) {
     //         setState({
@@ -68,6 +74,7 @@ const Product2 = () => {
     //         })
     //     }
     // }
+
     return (
         <Fragment>
             <div className='header'>
@@ -77,12 +84,16 @@ const Product2 = () => {
 
                 <div className='troley'>
                     <img src="https://www.flaticon.com/svg/static/icons/svg/3144/3144456.svg" alt="" />
+                    {/* Menerima state "order" */}
                     <div className='count'>{state.order}</div>
                 </div>
             </div>
+            {/* Meneriam Cardproduct diman akan dikrimkan props */}
             <CardProduct order={state.order}
+                // Mengrim method handlePlus dan hanldeMinus
                 // handlePlus={handlePlus}
                 // handleMinus={handleMinus}
+                // Membuat props "counterChange yang akan diterima oleh CardProduct"
                 counterChange={(value) => handleCounter(value)} />
         </Fragment>
     )
