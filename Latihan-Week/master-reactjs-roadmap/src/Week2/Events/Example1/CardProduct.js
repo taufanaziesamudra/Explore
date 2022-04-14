@@ -54,30 +54,28 @@
 
 import React, { useState } from 'react'
 import './Product.css'
-const CardProduct = (props) => {
+const CardProduct = ({order, counterChange, setState}) => {
     // Menginisialisasi state
-    const [state, setState] = useState({
-        order: 5,
-    })
+    // const [state, setState] = useState({
+    //     order: 5,
+    // })
 
     const handleCounterChange = (newValue) => {
-        props.counterChange(newValue)
+        counterChange(newValue)
     }
 
     const handlePlus = () => {
         setState({
-            order: state.order + 1
-        }, () => {
-            handleCounterChange(state.order)
-        })
-    }
+            order: order + 1
+        })  
+        }
 
     const handleMinus = () => {
-        if (state.order > 0) {
+        if (order > 0) {
             setState({
-                order: state.order - 1
+                order: order - 1
             }, () => {
-                handleCounterChange(state.order)
+                handleCounterChange(order)
             })
         }
     }
@@ -91,7 +89,7 @@ const CardProduct = (props) => {
             <p className="product-price">Rp. 54.000</p>
             <div className="counter">
                 <button onClick={handleMinus} className="minus">-</button>
-                <input className="type" value={state.order}></input>
+                <input className="type" value={order}></input>
                 <button onClick={handlePlus} className="plus">+</button>
             </div>
         </div >

@@ -54,7 +54,10 @@ const Product = () => {
             {/* </div> */}
             {/* </div> */}
 
-            <CardProduct order={state.order} counterChange={(value) => handleCounter(value)} />
+            <CardProduct 
+            order={state.order}
+            setState={setState}
+            counterChange={handleCounter} />
         </Fragment>
     )
 }
