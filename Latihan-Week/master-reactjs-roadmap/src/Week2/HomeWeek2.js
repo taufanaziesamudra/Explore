@@ -1,14 +1,4 @@
 import React from 'react'
-// import Parents from './Form/Example1/Parents'
-
-import Product from './Events/Example1/Product'
-// import BoxFunction from './Events/Example2/BoxFunction'
-// import Home from './Events/Example3/Home'
-// import StateOperan from './Events/Example4/StateOperan'
-// import Parent from './Events/Example5/Parent'
-// import Home from './Events/Example6/Home'
-// import FreeCode from './Events/Example6/FreeCode'
-
 // Conditional
 // import LoginControl from './Conditional/Example1/LoginControl'
 // import UserGreeting from './Conditional/Example2/UserGreeting'
@@ -18,6 +8,21 @@ import Product from './Events/Example1/Product'
 // import HomePage from './Conditional/Exampl/e6/HomePage'
 // import GameofChange from './Conditional/Example7/GameofChange'
 // import IfElse from './Conditional/Example8/IfElse'
+
+
+// Events
+import Product from './Events/Example1/Product'
+// import BoxFunction from './Events/Example2/BoxFunction'
+// import Home from './Events/Example3/Home'
+// import StateOperan from './Events/Example4/StateOperan'
+// import Parent from './Events/Example5/Parent'
+// import FreeCode from './Events/Example6/FreeCode'
+
+// Form
+// import Parents from './Form/Example1/Parents'
+// import Home from './Form/Example2/Home'
+// import Input from './Form/Example3/Input'
+// import Condtional from './Form/Example4/Condtional'
 
 const HomeWeek2 = () => {
     // const messages = ['React', 'Re: React', 'Re:Re: React']
@@ -33,17 +38,19 @@ const HomeWeek2 = () => {
             {/* <GameofChange /> */}
             {/* <IfElse /> */}
 
-            <h2>Event</h2>
+            {/* <h2>Event</h2> */}
             <Product />
             {/* <BoxFunction /> */}
             {/* <Home /> */}
             {/* <StateOperan /> */}
             {/* <Parent /> */}
-            {/* <Home /> */}
             {/* <FreeCode /> */}
 
-            {/* <h2>Form</h2> */}
+            <h2>Form</h2>
             {/* <Parents /> */}
+            {/* <Home /> */}
+            {/* <Input /> */}
+            {/* <Condtional /> */}
         </div>
     )
 }

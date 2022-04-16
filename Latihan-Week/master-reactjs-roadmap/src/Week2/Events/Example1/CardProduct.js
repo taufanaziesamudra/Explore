@@ -52,13 +52,9 @@
 // export default CardProduct
 
 
-import React, { useState } from 'react'
+import React from 'react'
 import './Product.css'
 const CardProduct = ({order, counterChange, setState}) => {
-    // Menginisialisasi state
-    // const [state, setState] = useState({
-    //     order: 5,
-    // })
 
     const handleCounterChange = (newValue) => {
         counterChange(newValue)
@@ -67,6 +63,8 @@ const CardProduct = ({order, counterChange, setState}) => {
     const handlePlus = () => {
         setState({
             order: order + 1
+        }, () => {
+            handleCounterChange(order)
         })  
         }
 
@@ -78,8 +76,8 @@ const CardProduct = ({order, counterChange, setState}) => {
                 handleCounterChange(order)
             })
         }
-    }
-
+    } 
+    
     return (
         <div className="card">
             <div className="img-thumb-prod">
