@@ -24,16 +24,20 @@ import React, { useState } from 'react'
 // import Input from './Form/Example3/Input'
 // import Condtional from './Form/Example4/Condtional'
 // import Qestion from './Form/Example5/Qestion'
+// import MyTodoList from './Form/Example6/MyTodoList'
 // import NameForm from './Form/Example7/NameForm'
 
 //! LifeCycle
-import MyFunc from './LifeCycle/Example1/MyFunc'
+// import MyFunc from './LifeCycle/Example1/MyFunc'
 
 //! List & Key
 // import MapLooping from './List&Key/Example1/MapLooping'
 // import Looping from './List&Key/Example2/Looping'
 // import Users from './List&Key/Example3/Users'
 // import Images from './List&Key/Example4/Images'
+
+//! Filter
+// import FIlterAndMap from './Filter/FIlterAndMap'
 const HomeWeek2 = () => {
     // const messages = ['React', 'Re: React', 'Re:Re: React']
 
@@ -64,17 +68,19 @@ const HomeWeek2 = () => {
             {/* <StateOperan /> */}
             {/* <Parent /> */}
             {/* <FreeCode /> */}
-            {/* <h2>Form</h2> */}
+
+            {/* // TODO <h2>Form</h2> */}
             {/* <Parents /> */}
             {/* <Home /> */}
             {/* <Input /> */}
             {/* <Condtional /> */}
             {/* <Qestion /> */}
             {/* <NameForm /> */}
+            {/* <MyTodoList /> */}
 
-            <h2>LifeCycle</h2>
-            <button onClick={handleToggle}>Toggle</button>
-            {toggle && <MyFunc />}
+            {/* // TODO <h2>LifeCycle</h2> */}
+            {/* <button onClick={handleToggle}>Toggle</button> */}
+            {/* {toggle && <MyFunc />} */}
 
 
             {/* // TODO <h2>List & key </h2> */}
@@ -82,6 +88,9 @@ const HomeWeek2 = () => {
             {/* <Looping /> */}
             {/* <Users /> */}
             {/* <Images /> */}
+
+            <h2>Filter</h2>
+            {/* <FIlterAndMap /> */}
         </div>
     )
 }
