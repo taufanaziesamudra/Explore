@@ -52,13 +52,13 @@ export class Home extends Component {
       // Dan jika ada idnya maka akan mengedit data
       // Membuat variable baru diamana menerima value dari makanans
       const notEat = this.state.makanans
-      // Memfilter dan melooping makanan yang yang akan diedit
-      //! Jika makanan.id tidak sama dengan state id  maka akan melooping dan memfilter
+        // Memfilter dan melooping makanan yang yang akan diedit
+        //! Jika makanan.id tidak sama dengan state id  maka akan melooping dan memfilter
         .filter((makanan) => makanan.id !== this.state.id)
         .map((filterEat) => {
           return filterEat
         })
-        // setState untuk mengedit
+      // setState untuk mengedit
       this.setState({
         makanans: [
           ...notEat,
@@ -92,6 +92,19 @@ export class Home extends Component {
     //! Setelah mengeditv harus mengubah handleSubmit
     // console.log('ID:', id)
   }
+
+  //TODO Method untuk menghapus data makanan
+  deleteEat = (id) => {
+    // Membuat variable baru dengan menerima value makanan yang sudah terisi
+    //! Membuat vairable untuk mengembalikan array dengan data yang sudah dihapus
+    const newEat = this.state.makanans
+      // Memfilter dan melooping makanan yang yang akan diedit
+      .filter((makanan) => makanan.id !== id)
+      .map((filterEat) => {
+        return filterEat
+      })
+    this.setState({ makanans: newEat })
+  }
   render() {
     return (
       <div>
@@ -99,7 +112,8 @@ export class Home extends Component {
         <div className='container mt-5'>
           <ListEat
             makanans={this.state.makanans}
-            editEat={this.editEat} />
+            editEat={this.editEat}
+            deleteEat={this.deleteEat} />
           <Create
             {...this.state}
             handleChange={this.handleChange}
