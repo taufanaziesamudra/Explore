@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col, Form, Row, Button } from 'react-bootstrap'
 
-const CreateEat = ({ nama, deskripsi, harga, handleChange, handleSubmit }) => {
+const Create = ({ name, deskripsi, harga, handleChange, handleSubmit }) => {
   return (
     <div className='mt-5'>
       <Row>
@@ -17,8 +17,8 @@ const CreateEat = ({ nama, deskripsi, harga, handleChange, handleSubmit }) => {
               <Form.Label>Nama Makanan</Form.Label>
               <Form.Control
                 type='text'
-                name='nama'
-                value={nama}
+                name='name'
+                value={name}
                 onChange={(event) => handleChange(event)}></Form.Control>
             </Form.Group>
 
@@ -48,4 +48,4 @@ const CreateEat = ({ nama, deskripsi, harga, handleChange, handleSubmit }) => {
   )
 }
 
-export default CreateEat
+export default Create

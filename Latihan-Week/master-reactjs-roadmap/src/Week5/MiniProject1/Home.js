@@ -1,54 +1,113 @@
-import React, { useState } from 'react'
-import CreateEat from './CreateEat'
-import DaftarMakanan from './DaftarMakanan'
+import React, { Component } from 'react'
+import Create from './Create'
+import ListEat from './ListEat'
 import NavbarComponent from './NavbarComponent'
+export class Home extends Component {
+  constructor(props) {
+    super(props)
 
-const Home = () => {
-  const [state, setState] = useState({
-    makanans: [],
-    nama: '',
-    deskripsi: '',
-    harga: 0,
-    id: ''
-  })
-
-  // TODO Untuk menerima perubahan
-  const handleChange = (event) => {
-    setState({
-      [event.target.value]: event.target.value
-    })
-    console.log('Halo')
+    this.state = {
+      makanans: [],
+      id: '',
+      name: '',
+      deskripsi: '',
+      harga: 0
+    }
   }
 
-  const handleSUbmit = (event) => {
+  //TODO Metgod untuk menginput form
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
+  //TODO Method untuk menambahkan makanans
+  handleSubmit = (event) => {
+    // eventPreventDefault untuk mereload
     event.preventDefault()
 
-    console.log('Data: ', state.makanans)
-    // setState({
-    // makanans: [
-    // ...state.makanans,
-    // {
-    // id: state.makanans.length + 1,
-    // nama: state.nama,
-    // deskripsi: state.deskripsi,
-    // harga: state.harga
-    // }
-    // ]
-    // })
+    // Jika state id kosong maka akan menambah data
+    if (this.state.id === '') {
+      this.setState({
+        makanans: [
+          ...this.state.makanans,
+          {
+            id: this.state.makanans.length + 1,
+            name: this.state.name,
+            deskripsi: this.state.deskripsi,
+            harga: this.state.harga
+          }
+        ]
+      })
+      // console.log('Data:', this.state)
+      //TODO Untuk meghilangkan data yang sudah tersubmit
+      this.setState({
+        id: '',
+        name: '',
+        deskripsi: '',
+        harga: '',
+      })
+    } else {
+      // Dan jika ada idnya maka akan mengedit data
+      // Membuat variable baru diamana menerima value dari makanans
+      const notEat = this.state.makanans
+      // Memfilter dan melooping makanan yang yang akan diedit
+      //! Jika makanan.id tidak sama dengan state id  maka akan melooping dan memfilter
+        .filter((makanan) => makanan.id !== this.state.id)
+        .map((filterEat) => {
+          return filterEat
+        })
+        // setState untuk mengedit
+      this.setState({
+        makanans: [
+          ...notEat,
+          {
+            id: this.state.makanans.length + 1,
+            name: this.state.name,
+            deskripsi: this.state.deskripsi,
+            harga: this.state.harga
+          }
+        ]
+      })
+    }
   }
-  return (
-    <div>
-      <NavbarComponent />
-      <div className='container mt-5'>
-        <DaftarMakanan />
-        <CreateEat nama={state.nama}
-          deskripsi={state.deskripsi}
-          harga={state.harga} id={state.id}
-          handleChange={handleChange}
-          handleSUbmit={handleSUbmit} />
+
+  //TODO Method untuk mengedit data
+  editEat = (id) => {
+    // Membuat variable baru dengan menerima value makanan yang sudah terisi
+    const takeEat = this.state.makanans
+      // Memfilter dan melooping makanan yang yang akan diedit
+      .filter((makanan) => makanan.id === id)
+      .map((filterEat) => {
+        return filterEat
+      })
+    // Makanan yang sudah dipilih akan diedit
+    this.setState({
+      id: takeEat[0].id,
+      name: takeEat[0].name,
+      deskripsi: takeEat[0].deskripsi,
+      harga: takeEat[0].harga
+    })
+    //! Setelah mengeditv harus mengubah handleSubmit
+    // console.log('ID:', id)
+  }
+  render() {
+    return (
+      <div>
+        <NavbarComponent />
+        <div className='container mt-5'>
+          <ListEat
+            makanans={this.state.makanans}
+            editEat={this.editEat} />
+          <Create
+            {...this.state}
+            handleChange={this.handleChange}
+            handleSubmit={this.handleSubmit} />
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default Home
