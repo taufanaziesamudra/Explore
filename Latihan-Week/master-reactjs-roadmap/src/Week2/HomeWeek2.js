@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+
 //! Conditional
 // import LoginControl from './Conditional/Example1/LoginControl'
 // import UserGreeting from './Conditional/Example2/UserGreeting'
@@ -26,6 +27,8 @@ import React, { useState } from 'react'
 // import Qestion from './Form/Example5/Qestion'
 // import MyTodoList from './Form/Example6/MyTodoList'
 // import NameForm from './Form/Example7/NameForm'
+// import Mahasiswa from './Form/Practice1/Mahasiswa'
+import Apps from './Form/Practice2/Apps'
 
 //! LifeCycle
 // import MyFunc from './LifeCycle/Example1/MyFunc'
@@ -37,17 +40,20 @@ import React, { useState } from 'react'
 // import Images from './List&Key/Example4/Images'
 
 //! Filter
+// import Filter from './Filter/Filter'
 // import FIlterAndMap from './Filter/FIlterAndMap'
 const HomeWeek2 = () => {
+    //TODO Untuk Conditonal MailPage
     // const messages = ['React', 'Re: React', 'Re:Re: React']
 
-    const [toggle, setToggle] = useState(true)
+    //TODO Untuk LifeCycle MyFunc
+    // const [toggle, setToggle] = useState(true)
     // const handleToggle = () => setToggle(currentState => !currentState)
-    const handleToggle = () => {
-        setToggle(currentState => {
-            return !currentState
-        })
-    }
+    // const handleToggle = () => {
+    // setToggle(currentState => {
+    // return !currentState
+    // })
+    // }
     return (
         <div>
             {/* // TODO <h2>Conditional</h2> */}
@@ -77,6 +83,9 @@ const HomeWeek2 = () => {
             {/* <Qestion /> */}
             {/* <NameForm /> */}
             {/* <MyTodoList /> */}
+            {/* //! <h2>Practice</h2> */}
+            {/* <Mahasiswa /> */}
+            <Apps />
 
             {/* // TODO <h2>LifeCycle</h2> */}
             {/* <button onClick={handleToggle}>Toggle</button> */}
@@ -89,8 +98,10 @@ const HomeWeek2 = () => {
             {/* <Users /> */}
             {/* <Images /> */}
 
-            <h2>Filter</h2>
+            {/* // TODO <h2>Filter</h2> */}
+            {/* <Filter /> */}
             {/* <FIlterAndMap /> */}
+
         </div>
     )
 }

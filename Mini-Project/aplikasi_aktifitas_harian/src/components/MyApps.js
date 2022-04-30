@@ -1,38 +1,75 @@
-import React, { useState } from 'react'
+import React, { Component } from 'react'
+import '../App.css'
+import Header from './Header'
 
-const MyApps = () => {
-    const [state, setState] = useState({
-        input: '',
-        submit: '',
-    })
-
-    const handleChange = (event) => {
-        setState({
-            input: event.target.value
-        })
+class MyApps extends Component {
+    state = {
+        todos: [],
+        // jam: '',
+        // aktifitas: ''
     }
 
-    const handleSubmit = (event) => {
-        // const jam = jam.value
-        // const aktifitas = aktifitas.value
+    // handleChange = (event) => {
+    // this.setState({
+    // [event.target.name]: event.target.value
+    // })
+    // console.log('Data', this.state)
+    // }
+
+
+    handeSubmit = (event) => {
         event.preventDefault()
-        setState({
-            submit: state.input
+        // Membuat variabel untuk mengisi form input
+        let jam = this.refs.jam.value
+        let aktifitas = this.refs.aktifitas.value
+
+        // Function untuk menambahkan inputan
+        this.state.todos.push({ jam, aktifitas })
+        this.setState({
+            todos: this.state.todos
         })
+
+        this.refs.formulir.reset()
     }
-    return (
-        <div>
-            <h2>Aplikasi Aktifitas Harian</h2>
-            <form onSubmit={handleSubmit}>
-                <input type='text' onChange={handleChange}
-                    value={state.input} placeholder='Jam Aktifitas' />
-                <input type='text' onChange={handleChange}
-                    value={state.input} placeholder='Jenis Aktifistas' />
-                <button type='submit'>Save</button>
-            </form>
-            <h1>{state.submit}</h1>
-        </div>
-    )
+
+
+    render() {
+        return (
+            <div className='App'>
+                <Header />
+                <form ref='formulir' className="form-inline">
+                    <input
+                        type='text'
+                        className='form-control'
+                        size='8'
+                        ref='jam'
+                        placeholder='Jam Aktifitas'
+                        onChange={this.handleChange} />
+
+                    <input
+                        type='text'
+                        className='form-control'
+                        size='30'
+                        ref='aktifitas'
+                        placeholder='Jenis Aktifistas'
+                        onChange={this.handleChange} />
+                    <button className='btn btn-info' onClick={this.handeSubmit}>Save</button>
+                </form>
+                <hr />
+                <div>
+                    <ul>
+                        {this.state.todos.map((data, i) =>
+                            <li key={i}>
+                                <div className='todo-wrapper'>
+                                    {data.jam} :
+                                    {data.aktifitas}
+                                </div>
+                            </li>)}
+                    </ul>
+                </div>
+            </div>
+        )
+    }
 }
 
 export default MyApps
