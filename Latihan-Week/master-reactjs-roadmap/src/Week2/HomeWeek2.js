@@ -6,7 +6,7 @@ import React, { useState } from 'react'
 // import MailBox from './Conditional/Example3/MailBox'
 // import Page from './Conditional/Example4/Page'
 // import Toggle from './Conditional/Example5/Toggle'
-// import HomePage from './Conditional/Exampl/e6/HomePage'
+import HomePage from './Conditional/Example6/HomePage'
 // import GameofChange from './Conditional/Example7/GameofChange'
 // import IfElse from './Conditional/Example8/IfElse'
 // import Conditional from './Conditional/Example9/Conditional'
@@ -28,7 +28,7 @@ import React, { useState } from 'react'
 // import MyTodoList from './Form/Example6/MyTodoList'
 // import NameForm from './Form/Example7/NameForm'
 // import Mahasiswa from './Form/Practice1/Mahasiswa'
-import Apps from './Form/Practice2/Apps'
+// import Apps from './Form/Practice2/Apps'
 
 //! LifeCycle
 // import MyFunc from './LifeCycle/Example1/MyFunc'
@@ -62,7 +62,7 @@ const HomeWeek2 = () => {
             {/* <MailBox unreadMessages={messages} /> */}
             {/* <Page /> */}
             {/* <Toggle /> */}
-            {/* <HomePage /> */}
+            <HomePage />
             {/* <GameofChange /> */}
             {/* <IfElse /> */}
             {/* <Conditional /> */}
@@ -85,7 +85,7 @@ const HomeWeek2 = () => {
             {/* <MyTodoList /> */}
             {/* //! <h2>Practice</h2> */}
             {/* <Mahasiswa /> */}
-            <Apps />
+            {/* <Apps /> */}
 
             {/* // TODO <h2>LifeCycle</h2> */}
             {/* <button onClick={handleToggle}>Toggle</button> */}

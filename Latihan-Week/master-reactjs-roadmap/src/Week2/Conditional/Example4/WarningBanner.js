@@ -1,5 +1,5 @@
-function WarningBanner(props) {
-    if (!props.warn) {
+function WarningBanner({ warn }) {
+    if (!warn) {
         return null;
     }
 

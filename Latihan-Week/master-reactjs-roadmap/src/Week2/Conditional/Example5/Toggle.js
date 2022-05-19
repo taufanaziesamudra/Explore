@@ -8,7 +8,6 @@ const Toggle = () => {
             <button onClick={() => setToggle(!isToggle)}>Toggle</button>
             {/* {isToggle && <Test />} */}
             {isToggle ? <Test /> : null}
-            {/* <Test /> */}
         </div>
     )
 }

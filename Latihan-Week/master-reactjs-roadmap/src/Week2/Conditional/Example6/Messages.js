@@ -18,8 +18,8 @@
 // Functional Component atau JSX
 import React from 'react'
 
-const Messages = (props) => {
-    if (props.isLoggedIn) {
+const Messages = ({ isLoggedIn }) => {
+    if (isLoggedIn) {
         return <h1>Welcome User</h1>
     } else {
         return <h1>Please Login</h1>

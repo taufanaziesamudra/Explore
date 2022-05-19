@@ -10,7 +10,7 @@ import HomeWeek2 from "./Week2/HomeWeek2";
 //! Week5
 // import Home from "./Week5/MiniProject1/Home";
 // import MyApp from "./Week5/MiniProject2/MyApp";
-import AppHome from "./Week5/MiniProject3/AppHome";
+// import AppHome from "./Week5/MiniProject3/AppHome";
 
 function App() {
   return (
