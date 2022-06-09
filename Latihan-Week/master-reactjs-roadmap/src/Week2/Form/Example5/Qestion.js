@@ -10,21 +10,21 @@ const Qestion = () => {
     randomIndex: ''
   })
 
+  const handleInput = (event) => {
+    setState({
+      userInput: event.target.value
+    })
+  }
+
   // ! Pertanyaan Jika userinput akan dikalikan 20
   const ask = () => {
     if (state.userInput) {
       setState({
         randomIndex: Math.floor(Math.random() * 20),
-        // TODO Mengebalikan userInput menjadi kosong
+        // TODO Mengembalikan userInput menjadi kosong
         userInput: ''
       })
     }
-  }
-
-  const handleInput = (event) => {
-    setState({
-      userInput: event.target.value
-    })
   }
 
   const possibleAnsewrs = [

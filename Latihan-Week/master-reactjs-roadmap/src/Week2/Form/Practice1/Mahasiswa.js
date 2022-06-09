@@ -52,7 +52,10 @@ class Mahasiswa extends Component {
     return (
       <div>
         <ListMahasiswa mahasiswa={this.state.mahasiswa} />
-        <CreateMahasiswa {...this.state} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
+        <CreateMahasiswa
+          {...this.state}
+          handleChange={this.handleChange}
+          handleSubmit={this.handleSubmit} />
       </div>
     )
   }

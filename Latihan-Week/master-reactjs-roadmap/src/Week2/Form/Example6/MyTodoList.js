@@ -31,7 +31,7 @@ class MyTodoList extends Component {
           type=''
           onChange={this.handleChange}
           placeholder='Input SparePart'></textarea>
-        <button onClick={this.handleSubmit}>Creat SparePart</button>
+        <button onClick={this.handleSubmit}>Create SparePart</button>
         <h1>MyTodoList:</h1>
         <ul>{items}</ul>
       </div>
