@@ -1,0 +1,96 @@
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+margin: 0;
+padding: 0;}
+
+h3 { color: #00a2c6; }
+
+.jumbotron {
+  font-size: 20px;
+  padding: 60px;
+  background-color:whitesmoke;
+  text-align: center;
+  color: black ;
+}
+
+a:hover:hover {
+  font-weight: bold;
+  color: skyblue;
+}
+
+.first-paragraf::first-letter {
+  font-size: 32px;
+  font-weight: bold;
+  color: saddlebrown;
+}
+
+nav {
+  background-color: #42f5c8;
+  padding: 5px;
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: white;
+}
+
+nav li {
+  display: inline;
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+.image-1, .image-2, .image-3 {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.box {
+  float: left;
+  width: 80%;
+}
+
+aside {
+  float: right;
+  width: 20%;
+  padding-left: 20px;
+}
+
+main {
+  padding: 20px;
+  overflow: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.profile{
+  width: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .box, aside {
+    width: 100%;
+    padding: 0;
+  }
+}
+footer {
+  padding: 20 px;
+  color: white;
+  background-color: #42f5c8;
+  text-align: center;
+  font-weight: bold;
+}
